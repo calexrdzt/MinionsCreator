@@ -1,0 +1,9 @@
+* {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+body, html {
+  margin: 100px;
+}
+/*# sourceMappingURL=main.css.map */

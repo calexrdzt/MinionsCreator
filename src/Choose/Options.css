@@ -1,0 +1,39 @@
+.title_options {
+  color: #e97419;
+  margin: 15px auto;
+  font-size: 2.3em;
+}
+
+.App_options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.options-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.optionsA {
+  width: 135px;
+  height: 135px;
+  background-color: #ebebeb;
+  border-radius: 25px;
+  margin: 10px 25px;
+  background-position: center center;
+  background-size: contain;
+}
+/*# sourceMappingURL=Options.css.map */

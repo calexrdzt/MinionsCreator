@@ -1,0 +1,48 @@
+
+ @font-face {
+    font-family: 'input';
+    src: url("../fonts/Poppins-Medium.ttf") format("truetype");
+ }
+
+ @font-face {
+    font-family: 'subtitles';
+    src: url("../fonts/Poppins-Medium.ttf") format("truetype");
+ }
+
+ $font-input: 'input', sans-serif;
+ $font-subtitles: 'subtitles', sans-serif;
+
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.App_nameT{
+    margin: 10px auto;
+}
+
+label{
+    font-family: $font-subtitles;
+    margin-left: 310px;
+    font-size: 1.1em;
+
+}
+
+
+
+.app_inputs{
+    width: 800px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 25px;
+    margin: 10px auto;
+    padding: 25px;
+    box-sizing: border-box;
+    color:black;   
+    background-color: white;
+    font-family: $font-input;
+    font-size: 1.1em;
+}
+
+
