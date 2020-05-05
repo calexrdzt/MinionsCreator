@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'minion';
+  src: url("../../fonts/MODERNA.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: 'Buttons';
+  src: url("../../fonts/Poppins-Medium.ttf") format("truetype");
+}
+
+.App {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e97419), color-stop(#f8d543), to(#e97419)) fixed;
+  background: linear-gradient(180deg, #e97419, #f8d543, #e97419) fixed;
+  margin: auto;
+  width: 100%;
+  height: 695px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.linkto {
+  color: white;
+  margin: 100px;
+  text-decoration: none;
+}
+
+.app_btnstart {
+  width: 300px;
+  height: 50px;
+  border-radius: 30px;
+  background: none;
+  border: 2px solid white;
+  margin: 20px auto;
+  font-family: "Buttons", sans-serif;
+  color: white;
+  font-size: 1.3em;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.app_btnstart:hover {
+  background: white;
+  color: #e97419;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.app_titles {
+  width: 70%;
+  height: 400px;
+  margin: 100px auto auto auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app_title {
+  font-family: "minion", sans-serif;
+  color: white;
+  font-size: 11em;
+  margin: 0px auto;
+}
+
+.app_title2 {
+  color: black;
+  font-size: 4em;
+  margin: -90px auto 0px auto;
+}
+
+.buttons_ini {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+/*# sourceMappingURL=App.css.map */

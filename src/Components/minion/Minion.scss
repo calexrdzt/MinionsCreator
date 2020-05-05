@@ -1,0 +1,77 @@
+
+.minion{
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 400px;
+
+    &-name{
+        margin: 25px auto 5px auto;
+        font-size: 2.3em;
+        color: rgba(233,116,25,1);
+    }
+}
+
+.minion_content{
+        &-img{
+            position: relative;
+            box-sizing: content-box;
+            margin: auto 0;
+            border-radius: 25px;
+            width: 400px;
+            height: 500px;
+            background-image: url('/images/BodyA.png');
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: rgb(255, 255, 255);
+        }
+
+        &-hair{
+            position: absolute;
+            margin: auto;
+            width: 400px;
+            height: 500px;
+            background-image: url('/images/hairB3.png');
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+
+        &-eye{
+            position: absolute;
+            width: 400px;
+            height: 500px;
+            background-image: url('/images/EyeA1.png');
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+
+        &-mouth{
+            position: absolute;
+            margin: auto;
+            width: 400px;
+            height: 500px;
+            background-image: url('/images/mouthB2.png');
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        &-cloth{
+            position: absolute;
+            margin: auto;
+            width: 400px;
+            height: 500px;
+            background-image: url('/images/Cloth2.png');
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+}
