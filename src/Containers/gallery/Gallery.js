@@ -11,6 +11,18 @@ export const Gallery = () =>{
         console.log(context.list);
     }
 
+    const handleMinionDelete = (index) =>{
+        // const index= context.list.findIndex((elem)=> {
+            //     return elem.index === ind;
+            // });
+            context.setList([
+                ...context.list.slice(0,index),
+                ...context.list.slice(index + 1)
+                
+            ]);
+            console.log('Borrandooo Minion: ' + index);
+    }
+
   return (
     <div className="App_Gallery">
 
@@ -18,7 +30,7 @@ export const Gallery = () =>{
             <h1 className="gallery_tittle">Galleryyyy</h1>
 
             <div className="gallery_minios">
-                {context.list.map(minion => {
+                {context.list.map((minion, index) => {
                     return <Minion 
                         name={minion.name} 
                         body={minion.body} 
@@ -26,7 +38,7 @@ export const Gallery = () =>{
                         eyes={minion.eyes} 
                         mouth={minion.mouth}
                         cloth={minion.cloth}
-                        
+                        onDelete={() => handleMinionDelete(index)}
                         />
                 })}
 
