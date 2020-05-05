@@ -104,7 +104,7 @@
 }
 
 .app_btnnext {
-  width: 300px;
+  width: 200px;
   height: 60px;
   border-radius: 30px;
   background: none;
@@ -122,5 +122,14 @@
   color: white;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+}
+
+.btns_space {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=Create.css.map */

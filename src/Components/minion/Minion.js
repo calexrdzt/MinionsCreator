@@ -18,7 +18,7 @@ export const Minion = ({body, name, hair, eyes, mouth, cloth, onDelete}) => {
               <div className="minion_content-mouth" style ={{backgroundImage: 'url(./images/' + mouth + '.png)' }}></div>
               <div className="minion_content-cloth" style ={{backgroundImage: 'url(./images/' + cloth + '.png)' }}></div>
             </div>
-            {onDelete && <button onClick={onDelete} >X</button>}
+            {onDelete && <button className="delete" onClick={onDelete} >X</button>}
         </div>
 
   );

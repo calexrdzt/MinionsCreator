@@ -83,7 +83,7 @@
 }
 
 .app_btnnext{
-    width: 300px;
+    width: 200px;
     height: 60px;
     border-radius: 30px;
     background: none;
@@ -99,4 +99,10 @@
     background: rgba(233,116,25,1);
     color: white;
     transition: all 0.3s ease-in ;
+}
+
+
+.btns_space{
+        display: flex;
+        justify-content: space-between;
 }

@@ -4,6 +4,7 @@ import './Render.css';
 import { useHistory } from 'react-router-dom';
 import Minion from '../../Components/minion/Minion';
 import { MinionContext } from '../../Utiles/MinionContext';
+import { Redirect } from 'react-router-dom'
 
 export const Render = () =>{
 
@@ -11,7 +12,7 @@ export const Render = () =>{
     const history = useHistory();
 
         
-
+        {!(context.mouth && context.eyes && context.hair && context.cloth) && history.push('/name');}
 
         const [state, setState] = React.useState({
             on: 'false',
@@ -47,6 +48,9 @@ export const Render = () =>{
             {(state.on && context.cloth.includes('Cloth5')) && context.setCloth('Cloth5M')}
 
             {(!state.on && context.cloth.includes('M')) && context.setCloth(context.listPrev[0].cloth)}
+
+
+
 
         console.log('Cambio: ' + state.on );
             

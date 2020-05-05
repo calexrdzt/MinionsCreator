@@ -23,7 +23,7 @@ export const Main = () =>{
         <h1 className="app_title">minions</h1>
         <h3 className="app_title2">creator</h3>
         <div className="buttons_ini">
-        <button className="app_btnstart" onClick={handleStart}>Start</button>
+        <button className="app_btnstart" onClick={handleStart}>Start to create</button>
         <button className="app_btnstart" onClick={handleGallery}>Gallery</button>
         </div>
         </div>

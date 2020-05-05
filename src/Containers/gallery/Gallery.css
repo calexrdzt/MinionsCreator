@@ -22,7 +22,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 650px;
+  height: 680px;
   width: 1000px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -31,6 +31,7 @@
   overflow-x: auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 25px;
 }
 
 .gallery_tittle {

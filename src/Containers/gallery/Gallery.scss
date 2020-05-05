@@ -13,12 +13,13 @@
     &_minios{
         margin: auto;
         display: flex;
-        height: 650px;
+        height: 680px;
         width: 1000px;
         justify-content: space-around;
         align-content: space-around;
         overflow-x: auto;
         flex-wrap: wrap;
+        padding: 25px;
     }
 
     &_tittle{

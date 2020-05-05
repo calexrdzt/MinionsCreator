@@ -8,6 +8,7 @@ import Mouth from '../../Components/Choose/Mouth';
 import Cloth from '../../Components/Choose/Cloth';
 import Minion from '../../Components/minion/Minion'
 import { MinionContext } from '../../Utiles/MinionContext';
+import Modal from 'react-modal';
 
 
 export const Create = () => {
@@ -15,9 +16,18 @@ export const Create = () => {
     const context = React.useContext(MinionContext);
     const history = useHistory();
 
+    const [open, setOpen] = React.useState(false);
+  Modal.setAppElement('#root')
+
+
     const[state, setState]  = React.useState({
         id: '',
       });
+
+
+      const handleBack = () =>{
+        history.push('/name');
+      }
 
 
       const handleClick = () => {
@@ -25,7 +35,7 @@ export const Create = () => {
         {
           (context.mouth && context.eyes && context.hair && context.cloth)
           && history.push('/render');
-        }
+        } setOpen(true);
 
         context.setListPrev([
           {
@@ -85,9 +95,18 @@ export const Create = () => {
         {state.id==="Cloth" && <Cloth/>}
         {state.id==="Mouth" && <Mouth/>}
 
-        <button className="app_btnnext"
-        onClick={handleClick}
-        > Next</button>
+        <div className="btns_space">  
+
+            <button className="app_btnnext"
+            onClick={handleBack}>
+            Back
+            </button>
+
+            <button className="app_btnnext"
+            onClick={handleClick}> 
+            Next
+            </button>
+        </div>
         </div>
         
         </div>
@@ -95,6 +114,30 @@ export const Create = () => {
       </div>
       
       </div>
+
+      <Modal isOpen={open} onRequestClose={()=> setOpen(false)}
+        style={
+          {
+            overlay:{
+              
+
+            },
+            content:{
+              backgroundColor:'rgba(233,116,25,1)',
+              border: 'none',
+              margin: 'auto',
+              width: '300px',
+              height: '35px',
+              borderRadius: '50px',
+              color: 'white',
+              fontSize: '1.3em',
+   
+            }
+          }
+
+        }
+       
+       > You are missing some elements </Modal>
     
     </div>
   );

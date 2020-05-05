@@ -8,6 +8,8 @@ export const MinionContext = React.createContext({
     mouth:'',
     cloth:'',
 
+    
+
     setName: () =>null,
     setBody: () => null,
     setHair: () => null,
@@ -22,4 +24,5 @@ export const MinionContext = React.createContext({
     setListPrev: () => null,
 
     handleFinish: () => null,
+
 })

@@ -13,7 +13,7 @@ import Gallery from '../gallery/Gallery';
 
 export const App = () => {
 
-  const [name, setName] = React.useState('Minionsito');
+  const [name, setName] = React.useState('');
   const [body, setBody] = React.useState('BodyA');
   const [hair, setHair] = React.useState('');
   const [eyes, setEyes] = React.useState('');
@@ -37,6 +37,9 @@ export const App = () => {
     console.log('Seteando List: '+ list);
     localStorage.setItem('list', JSON.stringify(list))
   },[list])
+
+
+  
 
   
   const handleFinish = () =>{
@@ -89,7 +92,7 @@ export const App = () => {
     listPrev: listPrev,
     setListPrev: setListPrev,
 
-    handleFinish: handleFinish
+    handleFinish: handleFinish,
 
   }
 
