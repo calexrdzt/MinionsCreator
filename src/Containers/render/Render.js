@@ -30,15 +30,15 @@ export const Render = () =>{
 
             {(state.on && context.hair.includes('hairA')) && context.setHair('hairAM')}
             {(state.on && context.hair.includes('hairB')) && context.setHair('hairBM')}
-            {(!state.on && context.hair.includes('M')) && context.setHair(context.list[0].hair)}       
+            {(!state.on && context.hair.includes('M')) && context.setHair(context.listPrev[0].hair)}       
             
             {(state.on && context.eyes.includes('EyeA')) && context.setEyes('EyeAM')}
             {(state.on && context.eyes.includes('EyeB')) && context.setEyes('EyeBM')}
-            {(!state.on && context.eyes.includes('M')) && context.setEyes(context.list[0].eyes)}
+            {(!state.on && context.eyes.includes('M')) && context.setEyes(context.listPrev[0].eyes)}
 
             {(state.on && context.mouth.includes('mouthA')) && context.setMouth('mouthAM')}
             {(state.on && context.mouth.includes('mouthB')) && context.setMouth('mouthBM')}
-            {(!state.on && context.mouth.includes('M')) && context.setMouth(context.list[0].mouth)}
+            {(!state.on && context.mouth.includes('M')) && context.setMouth(context.listPrev[0].mouth)}
 
             {(state.on && context.cloth.includes('Cloth1')) && context.setCloth('Cloth1M')}
             {(state.on && context.cloth.includes('Cloth2')) && context.setCloth('Cloth2M')}
@@ -46,7 +46,7 @@ export const Render = () =>{
             {(state.on && context.cloth.includes('Cloth4')) && context.setCloth('Cloth4M')}
             {(state.on && context.cloth.includes('Cloth5')) && context.setCloth('Cloth5M')}
 
-            {(!state.on && context.cloth.includes('M')) && context.setCloth(context.list[0].cloth)}
+            {(!state.on && context.cloth.includes('M')) && context.setCloth(context.listPrev[0].cloth)}
 
         console.log('Cambio: ' + state.on );
             
@@ -55,28 +55,7 @@ export const Render = () =>{
 
 
         const handleFinish = () =>{
-
-                context.setList([
-                ...context.list,
-                {
-                  name: context.name,
-                  body: context.body,
-                  hair: context.hair,
-                  eyes: context.eyes,
-                  mouth: context.mouth,
-                  cloth: context.cloth,
-                },
-              ]);
-
-
-            context.setName('');
-            context.setBody('BodyA');
-            context.setHair('');
-            context.setEyes('');
-            context.setMouth('');
-            context.setCloth('');
-
-            console.log('Se agrego a la listaa' + '   Lista de minions:  ' + context.eyes);
+            context.handleFinish();
             history.push('/');
         }
 

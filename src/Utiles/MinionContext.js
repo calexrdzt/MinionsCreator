@@ -20,4 +20,6 @@ export const MinionContext = React.createContext({
 
     listPrev: [],
     setListPrev: () => null,
+
+    handleFinish: () => null,
 })

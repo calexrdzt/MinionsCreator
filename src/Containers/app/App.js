@@ -22,7 +22,47 @@ export const App = () => {
   
   const [list, setList ] = React.useState([]);
   const [listPrev, setListPrev ] = React.useState([]);
+
+  React.useEffect(()=>{
+    const listString = localStorage.getItem('list');
+    if(listString !== null){
+      setList(JSON.parse(listString));
+    }
+
+    console.log('Leyendo lista: '+ listString);
+  }, []);
+
+
+  React.useEffect(() =>{
+    console.log('Seteando List: '+ list);
+    localStorage.setItem('list', JSON.stringify(list))
+  },[list])
+
   
+  const handleFinish = () =>{
+    setList([
+      ...list,
+      {
+        name: name,
+        body:body,
+        hair: hair,
+        eyes: eyes,
+        mouth: mouth,
+        cloth: cloth,
+      },
+    ]);
+
+
+      setName('');
+      setBody('BodyA');
+      setHair('');
+      setEyes('');
+      setMouth('');
+      setCloth('');
+
+  console.log('Se agrego a la listaa' + '   Lista de minions:  ' + eyes);
+  }
+
 
   const value ={
     name: name,
@@ -49,7 +89,11 @@ export const App = () => {
     listPrev: listPrev,
     setListPrev: setListPrev,
 
+    handleFinish: handleFinish
+
   }
+
+  
 
   return (
 
