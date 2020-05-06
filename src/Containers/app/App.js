@@ -33,17 +33,14 @@ export const App = () => {
     // }
     // console.log('Leyendo lista: '+ listString);
 
-     usersCol.doc('Calex').get().then(function(doc) {
-      if (doc.exists && doc.data().list) {
-        setList(doc.data().list);
-          console.log("Document data:", doc.data());
-      } 
-      setLoaded(true);
-      }).catch(function(error) {
-          console.log("Error getting document:", error);
-      });
-
-
+     usersCol.doc('Calex').onSnapshot((doc) =>{
+      if (doc.data().list) {
+            setList(doc.data().list);
+              console.log("Document data:", doc.data());
+          } 
+            setLoaded(true);
+     });
+ 
 
   }, []);
 
