@@ -18,14 +18,18 @@ export const Main = () =>{
   return (
     <div className="App">
 
-        <div className="app_titles">
+        <div className="app_content">
 
-        <h1 className="app_title">minions</h1>
-        <h3 className="app_title2">creator</h3>
-        <div className="buttons_ini">
-        <button className="app_btnstart" onClick={handleStart}>Start to create</button>
-        <button className="app_btnstart" onClick={handleGallery}>Gallery</button>
-        </div>
+          <div className="app_titles">
+
+            <h1 className="app_title">minions</h1>
+            <h3 className="app_title2">creator</h3>
+            <div className="buttons_ini">
+            <button className="app_btnstart" onClick={handleStart}>Start to create</button>
+            <button className="app_btnstart" onClick={handleGallery}>Gallery</button>
+            </div>
+          </div>
+
         </div>
 
 

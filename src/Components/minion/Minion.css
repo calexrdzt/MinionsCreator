@@ -13,7 +13,6 @@
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  width: 400px;
 }
 
 .minion-name {
@@ -31,10 +30,9 @@
   width: 400px;
   height: 500px;
   background-image: url("/images/BodyA.png");
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: white;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -45,7 +43,7 @@
   width: 400px;
   height: 500px;
   background-image: url("/images/hairB3.png");
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-transition: all 0.3s ease-in-out;
@@ -57,7 +55,7 @@
   width: 400px;
   height: 500px;
   background-image: url("/images/EyeA1.png");
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-transition: all 0.3s ease-in-out;
@@ -70,7 +68,7 @@
   width: 400px;
   height: 500px;
   background-image: url("/images/mouthB2.png");
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-transition: all 0.3s ease-in-out;
@@ -83,7 +81,7 @@
   width: 400px;
   height: 500px;
   background-image: url("/images/Cloth2.png");
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-transition: all 0.3s ease-in-out;

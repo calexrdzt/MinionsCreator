@@ -36,7 +36,7 @@ export const Name = () => {
 
 
   return (
-    <div className="App">
+    <div className="App_name">
 
     <h1 className="App_nameT">Choose a Name</h1>
 

@@ -17,7 +17,7 @@ export const Create = () => {
     const history = useHistory();
 
     const [open, setOpen] = React.useState(false);
-  Modal.setAppElement('#root')
+    Modal.setAppElement('#root')
 
 
     const[state, setState]  = React.useState({
@@ -60,6 +60,8 @@ export const Create = () => {
         console.log(id);
     }
 
+
+    {!(context.name) && history.push('/name');}
 
   return (
 

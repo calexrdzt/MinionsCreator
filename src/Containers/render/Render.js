@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import Minion from '../../Components/minion/Minion';
 import { MinionContext } from '../../Utiles/MinionContext';
 import { Redirect } from 'react-router-dom'
+import db from '../../Utiles/Firebase';
 
 export const Render = () =>{
 
@@ -61,7 +62,12 @@ export const Render = () =>{
         const handleFinish = () =>{
             context.handleFinish();
             history.push('/');
+
         }
+
+        const handleBack = () =>{
+            history.push('/create');
+          }
 
   return (
     <div className="App_render">
@@ -85,7 +91,18 @@ export const Render = () =>{
                         {!state.on && <button className="btn_Active" onClick={handleButton}>Desactivar</button>}
                     </div>
 
-                    <button className="btnnext" onClick={handleFinish}>Save</button>
+                    <div className="btns_space">  
+
+                        <button className="btnnext"
+                        onClick={handleBack}>
+                        Back
+                        </button>
+
+                        <button className="btnnext"
+                        onClick={handleFinish}> 
+                        Save
+                        </button>
+                    </div>
  
                 </div>
             </div>

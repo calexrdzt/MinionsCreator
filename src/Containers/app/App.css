@@ -9,14 +9,17 @@
 }
 
 .App {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e97419), color-stop(#f8d543), to(#e97419)) fixed;
-  background: linear-gradient(180deg, #e97419, #f8d543, #e97419) fixed;
   margin: auto;
   width: 100%;
   height: 695px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fd780a), color-stop(#fad920), to(#fd780a)) fixed;
+  background: linear-gradient(180deg, #fd780a, #fad920, #fd780a) fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .linkto {
@@ -84,5 +87,18 @@
   height: auto;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.app_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rebeccapurple;
+  background-image: url("/images/bgI.png");
 }
 /*# sourceMappingURL=App.css.map */

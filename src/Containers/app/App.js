@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.css'; 
 
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {HashRouter as Router, Route} from 'react-router-dom';
 
 import Name from '../name/Name';
 import Create from  '../create/Create';
 import Main from  '../main/Main';
 import Render from '../render/Render'
-import { MinionContext } from '../../Utiles/MinionContext';
 import Gallery from '../gallery/Gallery';
+import { MinionContext } from '../../Utiles/MinionContext';
+import db, { minionsCol, usersCol} from '../../Utiles/Firebase';
 
 
 export const App = () => {
@@ -23,20 +24,43 @@ export const App = () => {
   const [list, setList ] = React.useState([]);
   const [listPrev, setListPrev ] = React.useState([]);
 
-  React.useEffect(()=>{
-    const listString = localStorage.getItem('list');
-    if(listString !== null){
-      setList(JSON.parse(listString));
-    }
+  const [loaded, setLoaded] = React.useState(false);
 
-    console.log('Leyendo lista: '+ listString);
+  React.useEffect(()=>{
+    // const listString = localStorage.getItem('list');
+    // if(listString !== null){
+    //   setList(JSON.parse(listString));
+    // }
+    // console.log('Leyendo lista: '+ listString);
+
+     usersCol.doc('Calex').get().then(function(doc) {
+      if (doc.exists && doc.data().list) {
+        setList(doc.data().list);
+          console.log("Document data:", doc.data());
+      } 
+      setLoaded(true);
+      }).catch(function(error) {
+          console.log("Error getting document:", error);
+      });
+
+
+
   }, []);
 
 
   React.useEffect(() =>{
-    console.log('Seteando List: '+ list);
-    localStorage.setItem('list', JSON.stringify(list))
-  },[list])
+    // console.log('Seteando List: '+ list);
+    // localStorage.setItem('list', JSON.stringify(list))
+
+    if(loaded === true){
+      usersCol.doc('Calex').set({
+        list: list,
+      });
+
+    }
+
+
+  },[list, loaded])
 
 
   

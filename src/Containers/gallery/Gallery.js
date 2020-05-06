@@ -46,6 +46,8 @@ export const Gallery = () =>{
                         mouth={minion.mouth}
                         cloth={minion.cloth}
                         onDelete={() => handleMinionDelete(index)}
+                        width= '200px'
+                        height='300px'
                         />
                 })}
 

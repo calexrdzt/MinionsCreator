@@ -6,7 +6,6 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 400px;
 
     &-name{
         margin: 25px auto 5px auto;
@@ -24,10 +23,10 @@
             width: 400px;
             height: 500px;
             background-image: url('/images/BodyA.png');
-            background-size: auto;
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
-            background-color: rgb(255, 255, 255);
+         //   background-color: rgb(255, 255, 255);
             transition: all 0.3s ease-in-out ;
         }
 
@@ -37,7 +36,7 @@
             width: 400px;
             height: 500px;
             background-image: url('/images/hairB3.png');
-            background-size: auto;
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
             transition: all 0.3s ease-in-out ;
@@ -49,7 +48,7 @@
             width: 400px;
             height: 500px;
             background-image: url('/images/EyeA1.png');
-            background-size: auto;
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
             transition: all 0.3s ease-in-out ;
@@ -62,7 +61,7 @@
             width: 400px;
             height: 500px;
             background-image: url('/images/mouthB2.png');
-            background-size: auto;
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
             transition: all 0.3s ease-in-out ;
@@ -74,7 +73,7 @@
             width: 400px;
             height: 500px;
             background-image: url('/images/Cloth2.png');
-            background-size: auto;
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
             transition: all 0.3s ease-in-out ;
