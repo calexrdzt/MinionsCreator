@@ -33,7 +33,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 680px;
+  height: 650px;
   width: 1000px;
   -ms-flex-pack: distribute;
       justify-content: space-around;

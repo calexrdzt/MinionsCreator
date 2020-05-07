@@ -3,7 +3,7 @@ import './Minion.css';
 import PropTypes from 'prop-types';
 
 
-export const Minion = ({body, name, hair, eyes, mouth, cloth, onDelete, width, height}) => {
+export const Minion = ({body, name, hair, eyes, mouth, cloth, id, onDelete, onEdit, width, height}) => {
  
 
   return (
@@ -29,7 +29,9 @@ Minion.propTypes = {
   hair: PropTypes.string,
   mouth: PropTypes.string,
   cloth: PropTypes.string,
+  id: PropTypes.string,
   onDelete: PropTypes.func,
+  onEdit: PropTypes.func,
   width: PropTypes.string,
   height: PropTypes.string,
 }

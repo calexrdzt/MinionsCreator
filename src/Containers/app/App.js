@@ -9,7 +9,7 @@ import Main from  '../main/Main';
 import Render from '../render/Render'
 import Gallery from '../gallery/Gallery';
 import { MinionContext } from '../../Utiles/MinionContext';
-import db, { minionsCol, usersCol} from '../../Utiles/Firebase';
+import { minionsCol, usersCol} from '../../Utiles/Firebase';
 
 
 export const App = () => {
@@ -20,6 +20,7 @@ export const App = () => {
   const [eyes, setEyes] = React.useState('');
   const [mouth, setMouth] = React.useState('');
   const [cloth, setCloth] = React.useState('');
+  const [id, setId] = React.useState('');
   
   const [list, setList ] = React.useState([]);
   const [listPrev, setListPrev ] = React.useState([]);
@@ -34,7 +35,7 @@ export const App = () => {
     // console.log('Leyendo lista: '+ listString);
 
      usersCol.doc('Calex').onSnapshot((doc) =>{
-      if (doc.data().list) {
+      if (doc.exists && doc.data().list) {
             setList(doc.data().list);
               console.log("Document data:", doc.data());
           } 
@@ -64,16 +65,20 @@ export const App = () => {
 
   
   const handleFinish = () =>{
+    
+    const newMinion =  {
+      name: name,
+      body:body,
+      hair: hair,
+      eyes: eyes,
+      mouth: mouth,
+      cloth: cloth,
+      id: name + body + hair + eyes + mouth + cloth,
+    };
+
     setList([
       ...list,
-      {
-        name: name,
-        body:body,
-        hair: hair,
-        eyes: eyes,
-        mouth: mouth,
-        cloth: cloth,
-      },
+      newMinion,
     ]);
 
 
@@ -84,8 +89,13 @@ export const App = () => {
       setMouth('');
       setCloth('');
 
+      minionsCol.doc(newMinion.id).set(newMinion);
   console.log('Se agrego a la listaa' + '   Lista de minions:  ' + eyes);
   }
+
+
+
+  
 
 
   const value ={
@@ -106,6 +116,9 @@ export const App = () => {
 
     cloth: cloth,
     setCloth: setCloth,
+
+    id: id,
+    setId: setId,
 
     list: list,
     setList: setList,

@@ -5,7 +5,6 @@ import { useHistory } from 'react-router-dom';
 import Minion from '../../Components/minion/Minion';
 import { MinionContext } from '../../Utiles/MinionContext';
 import { Redirect } from 'react-router-dom'
-import db from '../../Utiles/Firebase';
 
 export const Render = () =>{
 

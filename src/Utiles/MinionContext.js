@@ -1,12 +1,13 @@
 import * as React from 'react';
 
 export const MinionContext = React.createContext({ 
-    name: '',
-    body: '',
+    name:'',
+    body:'',
     hair:'',
     eyes:'',
     mouth:'',
     cloth:'',
+    id:'',
 
     
 
@@ -16,6 +17,7 @@ export const MinionContext = React.createContext({
     setEyes: () => null,
     setMouth: () => null,
     setCloth: () => null,
+    setId: () => null,
 
     list: [],
     setList: () => null,

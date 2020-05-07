@@ -3,13 +3,21 @@ import './Gallery.css';
 import { MinionContext } from '../../Utiles/MinionContext';
 import Minion from '../../Components/minion/Minion';
 import Modal from 'react-modal';
+import { minionsCol } from '../../Utiles/Firebase';
+import { useHistory } from 'react-router-dom';
 
 export const Gallery = () =>{
 
     const context = React.useContext(MinionContext);
+    const history = useHistory();
+
     
     const handleClikc = () =>{
         console.log(context.list);
+    }
+
+    const handleBack = () =>{
+      history.push('/');
     }
 
     
@@ -18,17 +26,57 @@ export const Gallery = () =>{
     
  //   {context.list.length === '0' &&  setOpen(true);}
 
-    const handleMinionDelete = (index) =>{
-        // const index= context.list.findIndex((elem)=> {
-            //     return elem.index === ind;
-            // });
-            context.setList([
-                ...context.list.slice(0,index),
-                ...context.list.slice(index + 1)
-                
-            ]);
-            console.log('Borrandooo Minion: ' + index);
+    const handleMinionDelete = (id) =>{
+        const index= context.list.findIndex((elem)=> {
+          console.log('este es el id de el index : ' + elem.id + '  MiID ' );
+          return elem.id;
+        });
+        
+        console.log(context.list[index].id);  
+        
+        context.setList([
+          ...context.list.slice(0,index),
+          ...context.list.slice(index + 1)
+          
+        ]);
+        
+        minionsCol.doc(context.list[index].id).delete();
+
+            console.log('Borrandooo Minion: ' + context.list[index].id);
     }
+
+
+    const handleMinionEdit = (id) =>{
+      const index= context.list.findIndex((elem)=> {
+        console.log('este es el id de el index : ' + elem.id + '  MiID ' );
+        return elem.id;
+      });
+      
+      const min = context.list[index];
+
+      context.setName (min.name);
+      context.setBody (min.body);
+      context.setHair (min.hair);
+      context.setEyes (min.eyes);
+      context.setMouth (min.mouth);
+      context.setCloth (min.cloth);
+     // context.setId (min.id);
+
+      history.push('/create');
+
+      console.log(context.list[index].body);
+
+      // console.log(context.list[index].id);  
+      
+      // minionsCol.doc(context.list[index].id).delete();
+
+          // console.log('Editando Minion: ' + context.list[index].id);
+          console.log('Editando Minion: ');
+  }
+
+
+
+
 
   return (
     <div className="App_Gallery">
@@ -45,7 +93,9 @@ export const Gallery = () =>{
                         eyes={minion.eyes} 
                         mouth={minion.mouth}
                         cloth={minion.cloth}
+                        id={minion.id}
                         onDelete={() => handleMinionDelete(index)}
+                        onEdit={() => handleMinionEdit(index)}
                         width= '200px'
                         height='300px'
                         />
@@ -53,7 +103,10 @@ export const Gallery = () =>{
 
                 {/* <button onClick={handleClikc}>consolog</button> */}
             </div>
-
+            <button className="btnnext"
+                        onClick={handleBack}>
+                        Back
+                        </button>
         </div>
 
         <Modal isOpen={open} onRequestClose={()=> setOpen(false)}

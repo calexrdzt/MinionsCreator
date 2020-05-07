@@ -21,7 +21,7 @@ export const Create = () => {
 
 
     const[state, setState]  = React.useState({
-        id: '',
+        idBtn: '',
       });
 
 
@@ -45,6 +45,7 @@ export const Create = () => {
             eyes: context.eyes,
             mouth: context.mouth,
             cloth: context.cloth,
+            id: context.name + context.body + context.hair + context.eyes + context.mouth + context.cloth,
           }
         ]);
 
@@ -53,11 +54,11 @@ export const Create = () => {
 
 
     const getId = (e) =>{
-       const id= e.target.id;
+       const idBtn= e.target.id;
        setState({
-           id: id,
+        idBtn: idBtn,
         });
-        console.log(id);
+        console.log(idBtn);
     }
 
 
@@ -91,11 +92,11 @@ export const Create = () => {
         </div>
 
         <div className="options-next">
-        {state.id==="" && <Hair/>}
-        {state.id==="Eyes" && <Eyes/>}
-        {state.id==="Hair" && <Hair/>}
-        {state.id==="Cloth" && <Cloth/>}
-        {state.id==="Mouth" && <Mouth/>}
+        {state.idBtn==="" && <Hair/>}
+        {state.idBtn==="Eyes" && <Eyes/>}
+        {state.idBtn==="Hair" && <Hair/>}
+        {state.idBtn==="Cloth" && <Cloth/>}
+        {state.idBtn==="Mouth" && <Mouth/>}
 
         <div className="btns_space">  
 
