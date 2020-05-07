@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "342d4339956a1a85cb925e2372d505cf",
+    "revision": "36f10ab27c5550961f61c0d4e9a4aa68",
     "url": "/MinionsCreator/index.html"
   },
   {
-    "revision": "e0b19b81549578bea788",
-    "url": "/MinionsCreator/static/css/main.966cfc7b.chunk.css"
+    "revision": "305e9d3b9154f7d3dc22",
+    "url": "/MinionsCreator/static/css/main.1d73e649.chunk.css"
   },
   {
     "revision": "e2e586fc41cce0f7cee2",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/MinionsCreator/static/js/2.e02c9d79.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e0b19b81549578bea788",
+    "revision": "305e9d3b9154f7d3dc22",
     "url": "/MinionsCreator/static/js/main.857a7f33.chunk.js"
   },
   {
