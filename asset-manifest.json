@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/MinionsCreator/static/css/main.1d73e649.chunk.css",
-    "main.js": "/MinionsCreator/static/js/main.857a7f33.chunk.js",
-    "main.js.map": "/MinionsCreator/static/js/main.857a7f33.chunk.js.map",
-    "runtime-main.js": "/MinionsCreator/static/js/runtime-main.ddf18139.js",
-    "runtime-main.js.map": "/MinionsCreator/static/js/runtime-main.ddf18139.js.map",
-    "static/js/2.e02c9d79.chunk.js": "/MinionsCreator/static/js/2.e02c9d79.chunk.js",
-    "static/js/2.e02c9d79.chunk.js.map": "/MinionsCreator/static/js/2.e02c9d79.chunk.js.map",
-    "index.html": "/MinionsCreator/index.html",
-    "precache-manifest.d0d96adc4d7d6504b17d71a1b6589b69.js": "/MinionsCreator/precache-manifest.d0d96adc4d7d6504b17d71a1b6589b69.js",
-    "service-worker.js": "/MinionsCreator/service-worker.js",
-    "static/css/main.1d73e649.chunk.css.map": "/MinionsCreator/static/css/main.1d73e649.chunk.css.map",
-    "static/js/2.e02c9d79.chunk.js.LICENSE.txt": "/MinionsCreator/static/js/2.e02c9d79.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/MinionsCreator/static/media/MODERNA.938e1acd.TTF",
-    "static/media/Render.css": "/MinionsCreator/static/media/Poppins-Medium.ba95810b.ttf"
+    "main.css": "/static/css/main.efbe4e28.chunk.css",
+    "main.js": "/static/js/main.47eed9cf.chunk.js",
+    "main.js.map": "/static/js/main.47eed9cf.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.764e6371.js",
+    "runtime-main.js.map": "/static/js/runtime-main.764e6371.js.map",
+    "static/js/2.e02c9d79.chunk.js": "/static/js/2.e02c9d79.chunk.js",
+    "static/js/2.e02c9d79.chunk.js.map": "/static/js/2.e02c9d79.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.403ba31bffb556bd62fd118b72c69d9a.js": "/precache-manifest.403ba31bffb556bd62fd118b72c69d9a.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.efbe4e28.chunk.css.map": "/static/css/main.efbe4e28.chunk.css.map",
+    "static/js/2.e02c9d79.chunk.js.LICENSE.txt": "/static/js/2.e02c9d79.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/MODERNA.938e1acd.TTF",
+    "static/media/Render.css": "/static/media/Poppins-Medium.ba95810b.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.ddf18139.js",
+    "static/js/runtime-main.764e6371.js",
     "static/js/2.e02c9d79.chunk.js",
-    "static/css/main.1d73e649.chunk.css",
-    "static/js/main.857a7f33.chunk.js"
+    "static/css/main.efbe4e28.chunk.css",
+    "static/js/main.47eed9cf.chunk.js"
   ]
 }
